@@ -42,4 +42,9 @@ public class ScheduleController {
     public ResponseEntity<List<ScheduleDetailDTO>> getDetailByScheduleId(@PathVariable int scheduleId) {
         return new ResponseEntity<>(scheduleService.getByScheduleId(scheduleId), HttpStatus.OK);
     }
+
+
+
+
+
 }
