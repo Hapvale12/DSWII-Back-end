@@ -1,11 +1,9 @@
 package pe.com.dswii.Asistencia.persistence;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 import pe.com.dswii.Asistencia.domain.Schedule;
 import pe.com.dswii.Asistencia.domain.ScheduleDetail;
-import pe.com.dswii.Asistencia.domain.ScheduleDetailDTO;
 import pe.com.dswii.Asistencia.domain.repository.ScheduleRepository;
 import pe.com.dswii.Asistencia.persistence.crud.DetalleHorarioCrudRepository;
 import pe.com.dswii.Asistencia.persistence.crud.HorarioCrudRepository;
@@ -13,7 +11,6 @@ import pe.com.dswii.Asistencia.persistence.entity.Horario;
 import pe.com.dswii.Asistencia.persistence.mapper.ScheduleDetailMapper;
 import pe.com.dswii.Asistencia.persistence.mapper.ScheduleMapper;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package pe.com.dswii.Asistencia.domain;
+package pe.com.dswii.Asistencia.domain.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -12,5 +12,5 @@ public class ScheduleDTO {
     private Integer sectionId;
     private Integer teacherId;
     @NotNull(message = "needs 1 or more studentId")
-    private Integer students[];
+    private Integer[] students;
 }

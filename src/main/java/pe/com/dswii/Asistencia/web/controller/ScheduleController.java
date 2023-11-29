@@ -2,14 +2,13 @@ package pe.com.dswii.Asistencia.web.controller;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pe.com.dswii.Asistencia.domain.Schedule;
-import pe.com.dswii.Asistencia.domain.ScheduleDTO;
+import pe.com.dswii.Asistencia.domain.dto.ScheduleDTO;
 import pe.com.dswii.Asistencia.domain.ScheduleDetail;
-import pe.com.dswii.Asistencia.domain.ScheduleDetailDTO;
+import pe.com.dswii.Asistencia.domain.dto.ScheduleDetailDTO;
 import pe.com.dswii.Asistencia.domain.service.ScheduleService;
 
 import java.util.ArrayList;
@@ -38,7 +37,7 @@ public class ScheduleController {
         return ResponseEntity.of(scheduleService.getById(id));
     }
 
-    @GetMapping("/all")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Schedule> getAll() {
         return scheduleService.getAll();

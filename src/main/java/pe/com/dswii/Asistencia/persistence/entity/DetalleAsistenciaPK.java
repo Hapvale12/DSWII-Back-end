@@ -10,9 +10,9 @@ import java.io.Serializable;
 @Embeddable
 @Getter
 @Setter
-public class DetalleHorarioPK implements Serializable {
+public class DetalleAsistenciaPK implements Serializable {
     @Column(name = "id_detalle")
     private Integer idDetalle;
-    @Column(name = "id_horario")
-    private Integer idHorario;
+    @Column(name = "id_asistencia")
+    private Integer idAsistencia;
 }

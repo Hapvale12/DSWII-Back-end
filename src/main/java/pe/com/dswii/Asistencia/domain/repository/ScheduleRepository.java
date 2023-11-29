@@ -2,7 +2,6 @@ package pe.com.dswii.Asistencia.domain.repository;
 
 import pe.com.dswii.Asistencia.domain.Schedule;
 import pe.com.dswii.Asistencia.domain.ScheduleDetail;
-import pe.com.dswii.Asistencia.domain.ScheduleDetailDTO;
 
 import java.util.List;
 import java.util.Optional;
