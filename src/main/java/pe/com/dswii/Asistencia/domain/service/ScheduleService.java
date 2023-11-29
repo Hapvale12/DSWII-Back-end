@@ -37,6 +37,10 @@ public class ScheduleService {
         return scheduleRepository.getByProfessorId(teacherId);
     }
 
+    public List<Schedule> getAllActive(){
+        return scheduleRepository.getAllActive();
+    }
+
     public Optional<Schedule> getById(Integer id) {
         return scheduleRepository.getById(id);
     }
@@ -57,5 +61,15 @@ public class ScheduleService {
             scheduleDetailDTO.add(detailDTO);
         }
         return scheduleDetailDTO;
+    }
+
+    public void delete(int scheduleId){
+        if(getById(scheduleId).isPresent()){
+            Schedule schedule = scheduleRepository.getById(scheduleId).get();
+            schedule.setScheduleActive("I");
+            scheduleRepository.save(schedule);
+        }else{
+            System.out.println("ERROR 404 : SCHEDULE NOT FOUND");
+        }
     }
 }

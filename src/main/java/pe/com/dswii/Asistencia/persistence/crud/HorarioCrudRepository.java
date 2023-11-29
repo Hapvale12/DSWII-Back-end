@@ -2,6 +2,7 @@ package pe.com.dswii.Asistencia.persistence.crud;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import pe.com.dswii.Asistencia.domain.Schedule;
 import pe.com.dswii.Asistencia.persistence.entity.Horario;
 
 import java.util.List;
@@ -11,4 +12,8 @@ public interface HorarioCrudRepository extends JpaRepository<Horario, Integer> {
 
     @Query(value = "SELECT * FROM tb_horario WHERE id_profesor = ?1", nativeQuery = true)
     Optional<List<Horario>> findAllByIdProfesor(Integer idprofesor);
+
+    @Query(value = "SELECT * FROM tb_horario WHERE activo = 'I'", nativeQuery = true)
+    Optional<List<Horario>> findAllActive();
+
 }

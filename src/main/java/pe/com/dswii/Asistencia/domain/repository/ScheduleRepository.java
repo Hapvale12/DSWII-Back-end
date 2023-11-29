@@ -12,4 +12,7 @@ public interface ScheduleRepository {
     Optional<Schedule> getById(Integer id);
     List<Schedule> getAll();
     List<ScheduleDetail> getByScheduleId(Integer scheduleId);
+    void delete(int scheduleId);
+    List<Schedule> getAllActive();
+
 }

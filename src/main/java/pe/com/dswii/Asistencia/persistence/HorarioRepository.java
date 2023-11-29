@@ -49,4 +49,15 @@ public class HorarioRepository implements ScheduleRepository {
         List<ScheduleDetail> scheduleDetail = detailMapper.toDetails(detalleHorarioCrudRepository.getByScheduleId(scheduleId).get());
         return scheduleDetail;
     }
+
+    @Override
+    public void delete(int scheduleId) {
+        System.out.println("SE ELIMINO CORRECTAMENTE EL HORARIO");
+    }
+
+    @Override
+    public List<Schedule> getAllActive() {
+        List<Horario> horario = horarioCrudRepository.findAllActive().get();
+        return mapper.toSchedules(horario);
+    }
 }
