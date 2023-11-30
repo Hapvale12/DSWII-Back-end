@@ -9,7 +9,6 @@ import pe.com.dswii.Asistencia.domain.AttendanceDetail;
 import pe.com.dswii.Asistencia.domain.dto.AttendanceDTO;
 import pe.com.dswii.Asistencia.domain.dto.ScheduleDetailDTO;
 import pe.com.dswii.Asistencia.domain.repository.AttendanceRepository;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
